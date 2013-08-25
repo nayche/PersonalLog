@@ -1,0 +1,5 @@
+﻿- add code in the Catch against ConcurrencyException and allow user to apply the data (maybe reload the latest dataset)
+- when you "Save New" add code at the end to select the newly added row, so if the user needs to edit the row, it would not give an out of range exception
+- convert dates to (08-17) format for display in the daily log table.
+- add command on the main form for "Today"
+- in Vacation form, add a code to verify end date is not before start date.

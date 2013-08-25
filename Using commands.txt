@@ -1,0 +1,101 @@
+﻿# Insert a single new row into a database
+
+OleDbCommand cmd = new OleDbCommand();
+cmd.CommandText = "INSERT INTO tblPersonalLog (EmployeeName, TimeOut, ReturnTime, Destination, InputDate) " +
+                    "VALUES ('" + this.txtName.Text + "','" + this.txtTimeOut.Text + "','" + this.txtReturnTime.Text +
+                    "','" + this.txtDestination.Text + "','" + this.dateTimePLog.Value.ToShortDateString() + "')";
+daPLog.InsertCommand = cmd;
+daPLog.InsertCommand.Connection = cntPLog;
+
+// open connection and execute command
+cntPLog.Open();
+daPLog.InsertCommand.ExecuteNonQuery();
+cntPLog.Close();
+RefreshData();
+
+#end Insert
+_________________________________________________________________________________________________
+
+#Update a single database row
+
+// check against rows not being selected or empty table
+                if (dgvPLog.Rows.Count == 0 || dgvPLog.SelectedRows.Count > 1)
+                {
+                    MsgBox.Show("There are no selected records to modify", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+                // create five variables that equal the five values in the current 
+                int currentRowIndex = dgvPLog.CurrentRow.Index;
+
+                string employeeName = this.dgvPLog.CurrentRow.Cells[0].Value.ToString();
+                string destination = this.dgvPLog.CurrentRow.Cells[1].Value.ToString();
+                string timeOut = this.dgvPLog.CurrentRow.Cells[2].Value.ToString();
+                string returnTime = this.dgvPLog.CurrentRow.Cells[3].Value.ToString();
+                //DateTime inputDate = (DateTime) this.gridlinePLog.CurrentRow.Cells[4].Value;
+                //String inputDateString = inputDate.ToShortDateString();
+
+                // command to be used with dataadapter
+                OleDbCommand cmd = new OleDbCommand();
+                cmd.CommandText = "UPDATE tblPersonalLog " +
+                    "SET EmployeeName = '" + this.txtName.Text + "', TimeOut = '" + this.txtTimeOut.Text + "', ReturnTime = '" +
+                    this.txtReturnTime.Text + "', Destination = '" + this.txtDestination.Text + "', InputDate = #" + this.dateTimePLog.Value + "#" +
+                    " WHERE EmployeeName = '" + employeeName + "' AND TimeOut = '" + timeOut + "' AND ReturnTime= '" +
+                            returnTime + "' AND Destination = '" + destination + "'"; // +" AND InputDate = #" + inputDateString + "#";
+
+                // apply command to dataadapter Update command
+                daPLog.UpdateCommand = cmd;
+                daPLog.UpdateCommand.Connection = cntPLog;
+
+                // open connection and apply changes
+                cntPLog.Open();
+                daPLog.UpdateCommand.ExecuteNonQuery();
+                cntPLog.Close();
+
+                // refresh data and set focus to current row
+                this.RefreshData();
+                this.dgvPLog.Rows[currentRowIndex].Cells[0].Selected = true;
+#end update
+
+_______________________________________________________________________________________________________
+
+#Delete a single database row (directly to database)
+// create five variables that equal the five values in the current 
+                    int currentRowIndex = this.dgvPLog.CurrentRow.Index;
+
+                    string employeeName = this.dgvPLog.CurrentRow.Cells[0].Value.ToString();
+                    string destination = this.dgvPLog.CurrentRow.Cells[1].Value.ToString();
+                    string timeOut = this.dgvPLog.CurrentRow.Cells[2].Value.ToString();
+                    string returnTime = this.dgvPLog.CurrentRow.Cells[3].Value.ToString();
+                    //DateTime inputDate = (DateTime)this.gridlinePLog.CurrentRow.Cells[4].Value;
+                    //string inputDateString = inputDate.ToShortDateString();
+
+
+                    // i need to add a cast with condition if cast is not successful
+
+                    OleDbCommand cmd = new OleDbCommand();
+                    //cmd.CommandText = "DELETE FROM tblPersonalLog WHERE " +
+                    //    "[EmployeeName] = ? AND [TimeOut] = ? AND [ReturnTime] = ? AND [Destination] = ? AND [InputDate] = ?";
+
+                    cmd.CommandText = "DELETE FROM tblPersonalLog WHERE " +
+                            "EmployeeName = '" + employeeName + "' AND TimeOut = '" + timeOut + "' AND ReturnTime= '" +
+                            returnTime + "' AND Destination = '" + destination + "'"; // +" AND InputDate = #" + inputDateString + "#";
+
+                    //cmd.CommandText = "DELETE FROM tblPersonalLog WHERE EmployeeName = '" + employeeName + "'";
+
+
+                    daPLog.DeleteCommand = cmd;
+                    daPLog.DeleteCommand.Connection = cntPLog;
+
+                    // open connection and execute the delete command
+                    cntPLog.Open();
+                    daPLog.DeleteCommand.ExecuteNonQuery();
+                    cntPLog.Close();
+
+                    // refresh data and set focus to current row
+                    RefreshData();
+                    this.dgvPLog.Rows[currentRowIndex - 1].Cells[0].Selected = true;
+#end Delete
+
+___________________________________________________________________________________________________________________
+

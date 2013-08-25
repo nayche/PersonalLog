@@ -1,0 +1,55 @@
+﻿Typical Commands:
+
+INSERT INTO PersonalLog
+              (EmployeeName, TimeOut, ReturnTime, Destination, InputDate)
+VALUES        (?, ?, ?, ?, ?)
+
+
+UPDATE       PersonalLog
+SET                EmployeeName = ?, Destination = ?, TimeOut = ?, ReturnTime = ?, InputDate = ?
+WHERE        (EmployeeName = ?) AND (Destination = ?) AND (TimeOut = ?) AND (ReturnTime = ?) AND (InputDate = ?)
+
+
+DELETE FROM Vacation
+WHERE        (EmpID = ?) AND (EmployeeName = ?) AND (StartDate = ?) AND (EndDate = ?)
+
+---------------------------------------------------------------------------------------------
+SELECt AddressID, City, Zipcode
+FROM Person.Address
+
+SELECT AddressID, City, Zipcode
+FROM Address
+
+SELECT Person.Address.AddressID, Person.Address.City, Person.Address.Zipcode
+FROM Person.Address
+
+// Alias
+SELECT Myaddress = AddressID, Mycity=City, Zipcode
+FROM Address
+
+SELECT AddressID AS Myaddress, City AS Mycity, Zipcode
+FROM Address
+
+SELECT AddressID Myaddress, City MyCity, Zipcode
+FROM Address
+
+//Cast and Convert
+SELECT CAST(AddressID AS varchar(30)), City, Zipcode
+FROM Address
+
+SELECT CAST(Address AS varchar) City, Zipcode
+FROM Address
+
+SELECT CONVERT(varchar(30), AddressID), City, Zipcode
+FROM Address
+
+// Delete Command
+DELETE FROM tblPersonalLog
+WHERE        (EmployeeName = ?) AND (? = 1) AND (TimeOut IS NULL) AND (? = 1) AND (ReturnTime IS NULL) AND (? = 1) AND (Destination IS NULL) AND (InputDate = ?) OR
+                         (EmployeeName = ?) AND (? = 1) AND (TimeOut = ?) AND (? = 1) AND (ReturnTime IS NULL) AND (Destination IS NULL) AND (InputDate = ?) OR
+                         (EmployeeName = ?) AND (? = 1) AND (TimeOut IS NULL) AND (? = 1) AND (ReturnTime = ?) AND (Destination IS NULL) AND (InputDate = ?) OR
+                         (EmployeeName = ?) AND (? = 1) AND (TimeOut = ?) AND (ReturnTime = ?) AND (Destination IS NULL) AND (InputDate = ?) OR
+                         (EmployeeName = ?) AND (? = 1) AND (TimeOut IS NULL) AND (? = 1) AND (ReturnTime IS NULL) AND (Destination = ?) AND (InputDate = ?) OR
+                         (EmployeeName = ?) AND (? = 1) AND (TimeOut = ?) AND (ReturnTime IS NULL) AND (Destination = ?) AND (InputDate = ?) OR
+                         (EmployeeName = ?) AND (? = 1) AND (TimeOut IS NULL) AND (ReturnTime = ?) AND (Destination = ?) AND (InputDate = ?) OR
+                         (EmployeeName = ?) AND (TimeOut = ?) AND (ReturnTime = ?) AND (Destination = ?) AND (InputDate = ?)

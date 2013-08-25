@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personal Log", "Personal Log.csproj", "{E13B611C-57BF-4112-B96F-7EB625F6AF2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E13B611C-57BF-4112-B96F-7EB625F6AF2C}.Debug|x86.ActiveCfg = Debug|x86
+		{E13B611C-57BF-4112-B96F-7EB625F6AF2C}.Debug|x86.Build.0 = Debug|x86
+		{E13B611C-57BF-4112-B96F-7EB625F6AF2C}.Release|x86.ActiveCfg = Release|x86
+		{E13B611C-57BF-4112-B96F-7EB625F6AF2C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

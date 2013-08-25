@@ -1,0 +1,2 @@
+﻿- add code in the Catch against ConcurrencyException and allow user to apply the data (maybe reload the latest dataset)
+- when you "Save New" add code at the end to select the newly added row, so if the user needs to edit the row, it would not give an out of range exception

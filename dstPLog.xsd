@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dstPLog" targetNamespace="http://tempuri.org/dstPLog.xsd" xmlns:mstns="http://tempuri.org/dstPLog.xsd" xmlns="http://tempuri.org/dstPLog.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Personal_LogConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Personal_LogConnectionString (Settings)" PropertyReference="ApplicationSettings.PersonalLog.Properties.Settings.GlobalReference.Default.Personal_LogConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dstPLog" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dstPLog" msprop:Generator_UserDSName="dstPLog">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PersonalLog" msprop:Generator_TableClassName="PersonalLogDataTable" msprop:Generator_TableVarName="tablePersonalLog" msprop:Generator_TablePropName="PersonalLog" msprop:Generator_RowDeletingName="PersonalLogRowDeleting" msprop:Generator_UserTableName="PersonalLog" msprop:Generator_RowChangingName="PersonalLogRowChanging" msprop:Generator_RowEvHandlerName="PersonalLogRowChangeEventHandler" msprop:Generator_RowDeletedName="PersonalLogRowDeleted" msprop:Generator_RowEvArgName="PersonalLogRowChangeEvent" msprop:Generator_RowChangedName="PersonalLogRowChanged" msprop:Generator_RowClassName="PersonalLogRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EmployeeName" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_UserColumnName="EmployeeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Destination" msprop:Generator_ColumnVarNameInTable="columnDestination" msprop:Generator_ColumnPropNameInRow="Destination" msprop:Generator_ColumnPropNameInTable="DestinationColumn" msprop:Generator_UserColumnName="Destination" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TimeOut" msprop:Generator_ColumnVarNameInTable="columnTimeOut" msprop:Generator_ColumnPropNameInRow="TimeOut" msprop:Generator_ColumnPropNameInTable="TimeOutColumn" msprop:Generator_UserColumnName="TimeOut" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReturnTime" msprop:Generator_ColumnVarNameInTable="columnReturnTime" msprop:Generator_ColumnPropNameInRow="ReturnTime" msprop:Generator_ColumnPropNameInTable="ReturnTimeColumn" msprop:Generator_UserColumnName="ReturnTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InputDate" msprop:Generator_ColumnVarNameInTable="columnInputDate" msprop:Generator_ColumnPropNameInRow="InputDate" msprop:Generator_ColumnPropNameInTable="InputDateColumn" msprop:Generator_UserColumnName="InputDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Vacation" msprop:Generator_TableClassName="VacationDataTable" msprop:Generator_TableVarName="tableVacation" msprop:Generator_TablePropName="Vacation" msprop:Generator_RowDeletingName="VacationRowDeleting" msprop:Generator_UserTableName="Vacation" msprop:Generator_RowChangingName="VacationRowChanging" msprop:Generator_RowEvHandlerName="VacationRowChangeEventHandler" msprop:Generator_RowDeletedName="VacationRowDeleted" msprop:Generator_RowEvArgName="VacationRowChangeEvent" msprop:Generator_RowChangedName="VacationRowChanged" msprop:Generator_RowClassName="VacationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EmpID" msprop:Generator_ColumnVarNameInTable="columnEmpID" msprop:Generator_ColumnPropNameInRow="EmpID" msprop:Generator_ColumnPropNameInTable="EmpIDColumn" msprop:Generator_UserColumnName="EmpID" type="xs:short" minOccurs="0" />
+              <xs:element name="EmployeeName" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_UserColumnName="EmployeeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" msprop:Generator_UserColumnName="StartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EndDate" msprop:Generator_ColumnVarNameInTable="columnEndDate" msprop:Generator_ColumnPropNameInRow="EndDate" msprop:Generator_ColumnPropNameInTable="EndDateColumn" msprop:Generator_UserColumnName="EndDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

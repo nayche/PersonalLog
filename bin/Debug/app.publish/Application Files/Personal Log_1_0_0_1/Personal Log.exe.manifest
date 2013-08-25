@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Personal Log.exe" version="1.0.0.1" publicKeyToken="40cbf3d046cf932f" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Personal Log" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="Personal Log.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Personal Log.exe" size="71680">
+      <assemblyIdentity name="Personal Log" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>ZSt3mRQt6NKhyS8bpUZfPwvmuOY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Utilities.dll" size="4608">
+      <assemblyIdentity name="Utilities" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>VPQo6Nc4HVpHwGMo05H3cZ8z4Eg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Gmail login.txt" size="42">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ghbbpdHJn5oXDxv+/PqzJEb9gn4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="notes.txt" size="280">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Z//D99zrPJ40X2RDGNYTJKXIdso=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Personal Log.exe.config" size="651">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>yvmNYWzuKiABMtlNWBf1xipAnkQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SQL Training.txt" size="2507">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>7mpQ0u9o7x2DEvvkjIQVL6MBQ2Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Using commands.txt" size="5399">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>obGX9MoAXfrKq/U9T6vjL1+H9CE=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=HANAN-PC\ayche_000" issuerKeyHash="900fa2db3809022a7aff11665cba4b9cdbe89245" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>JKWwLfB1ifvLVyh6kwSqS5IM4AQ=</DigestValue></Reference></SignedInfo><SignatureValue>pPjF1fNdefg9q2tzTXmYeFsmzNUl+TGVmDHL5sHWLPGHH9JldJOQG8PJ4IF+fRVNSbpG11fZujFDAqRyz8rAity4pk2GxvP4Z4uFYUCfPxSEt1GcY4eWKcwgzDjoJ678LCRXeAHjq3x2fIlBpQKpVr1bx5nXVM2GtiJTzdyVcU4=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>sKCPZNKqFDskiMAHzlZJtY8DZbh9JOhh7tdzd16NWnGEcUS97G1kREV80xvZsP0fcTE2QdMhhOJJAovW+O/3hI3oDx3nfVuxiyYqa6dmaDEMglBiP1DbiAsESXFyAPlrXhg9UCLXtNQ1Fywr9Og9tOQjLM7Jm9sXUQIkNXpi1OE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="04e00c924baa04937a2857cbfb8975f02db0a524" Description="" Url=""><as:assemblyIdentity name="Personal Log.exe" version="1.0.0.1" publicKeyToken="40cbf3d046cf932f" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=HANAN-PC\ayche_000</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>oirN/sE+D8IgtUi7cL3iRAdUXeI=</DigestValue></Reference></SignedInfo><SignatureValue>GNnpESgRo8f+PM38RztQI2irI0l0VRccZtX4WAK2wkLF51JCO7dm07m0u1JmdnyxFOa0VEf7ZT1ZILc90oHKFrPu+16ctOqlmgVLKC+zAK99/BFKgiPDW9cLlA2v7fZXAH4eJe7sDkMjA5M4PLFkalnOSk62Oih3ibOFppgFnNs=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>sKCPZNKqFDskiMAHzlZJtY8DZbh9JOhh7tdzd16NWnGEcUS97G1kREV80xvZsP0fcTE2QdMhhOJJAovW+O/3hI3oDx3nfVuxiyYqa6dmaDEMglBiP1DbiAsESXFyAPlrXhg9UCLXtNQ1Fywr9Og9tOQjLM7Jm9sXUQIkNXpi1OE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQbmhdTmwtdpBI3NaVQ4/ChzANBgkqhkiG9w0BAQUFADAvMS0wKwYDVQQDHiQASABBAE4AQQBOAC0AUABDAFwAYQB5AGMAaABlAF8AMAAwADAwHhcNMTMwNzIxMDkwNDQzWhcNMTQwNzIxMTUwNDQzWjAvMS0wKwYDVQQDHiQASABBAE4AQQBOAC0AUABDAFwAYQB5AGMAaABlAF8AMAAwADAwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALCgj2TSqhQ7JIjAB85WSbWPA2W4fSToYe7Xc3dejVpxhHFEvextZERFfNMb2bD9H3ExNkHTIYTiSQKL1vjv94SN6A8d531bsYsmKmunZmgxDIJQYj9Q24gLBElxcgD5a14YPVAi17TUNRcsK/ToPbTkIyzOyZvbF1ECJDV6YtThAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAhfuMtZwP78F30wv6LntwuEetvVIZpTMDvUX700KL0OpfUoJuuBc1jN8bqoSklMfVqD1iFVv80el4TvgEhjpxZF6YfbCxztW68pNKhKvdX5IDNtk/tOt/d0GzUiu8HMGVW8wdCgUGk1V7y3Y7BjGBq4/4s1bFPoFHBgX8BJq4Tmc=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
